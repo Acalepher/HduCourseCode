@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ACA weather</title>
+    <style type="text/css">
+        body {
+            margin: 0; padding: 0;
+            width: 100%; height: 100%;
+            background-image: url("https://kerstatic.smartgslb.com/zhujike/img/bg-login.jpg");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1{
+            position: absolute;
+            width: 40vw; height:5vh;
+            left: 30vw; top: 3vh; 
+            text-align: center;
+        }
+        form{
+            position: absolute;
+            width: 25vw; height:5vh;
+            left: 37.5vw; top: 25vh; 
+            text-align: center;
+        }
+        footer{
+            position: absolute;
+            width: 25vw; height:5vh;
+            left: 37.5vw; top: 90vh; 
+            text-align: center;
+        }
+        .whole {
+            position: absolute;
+            width: 60vw; height:30vh;
+            left: 20vw; top: 35vh; 
+            text-align: left;
+            display: flex;
+            flex-wrap: wrap; 
+            background-color: rgba(255,255,255,.5); 
+            border-radius: 10px;
+        }
+        .whole div {
+            position: relative;
+            width: 100%; height: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .row span {
+            position: relative;
+            width: 12vw;
+            text-align: center;
+        }
+        .fail{
+            position: absolute;
+            width: 50px; height:50px;
+            left: 40%; top: 45%; 
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>西西A的天气查询系统</h1>
+    <form method="GET">
+        <input type = 'text' name = "city" placeholder="输入城市名称(仅限国内)">
+        <button type="submit">提交</button>
+    </form>
+    <div class="whole">
+        {% if weatherList %}
+            <div class="row">
+                <span>日期</span>
+                <span>天气</span>
+                <span>最高温度（℃）</span>
+                <span>最低温度（℃）</span>
+                <span>风力</span>
+            </div>
+            {% for weatherDay in weatherList %}
+                <div class="row">
+                    {% for i in weatherDay %}
+                    <span>{{i}}</span>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class = "fail">
+                请输入正确的城市名。
+            </div>
+        {% endif %}
+    </div>
+    <footer><p><small>&copy; 2018 acaleph. All Rights Reserved.</small></p></footer>
+</body>
+</html>
