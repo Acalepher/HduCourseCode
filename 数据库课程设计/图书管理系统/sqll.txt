@@ -1,0 +1,55 @@
+#图书信息查询
+SELECT BOOKS.*
+FROM BOOKS
+WHERE BOOKS.Bno LIKE '%2%'
+
+SELECT BOOKS.*
+FROM BOOKS
+WHERE BOOKS.Bname LIKE '%镇%'
+
+SELECT BOOKS.*
+FROM BOOKS
+WHERE BOOKS.Bauth LIKE 'P%'
+
+SELECT BOOKS.*
+FROM BOOKS
+WHERE BOOKS.Bph LIKE '水母出版%'
+
+SELECT BOOKS.*
+FROM BOOKS
+WHERE BOOKS.Btag LIKE '爱情%'
+
+
+#本人借阅信息查询
+SELECT Bno, Bname, Bauth, Bph, Btag, Bdt
+FROM STUDENT, BOOKS
+WHERE Sno=Bsno AND Sno='16272001'
+
+dipingqi66
+#新进图书录入
+INSERT INTO `BOOKS`(`Bno`, `Bname`, `Bauth`, `Bph`, `Btag`) VALUES ('3','致青春','辛咿唔','水母出版社','爱情')
+
+#借书证办理
+INSERT INTO `STUDENT`(`Sno`, `Sname`, `Spwd`, `Stel`) VALUES ('16272005','吴邪','272005','13800000005')
+
+#借书
+UPDATE `BOOKS` SET `Bct`=Bct+1,`Bsno`=16272001 WHERE Bno='2'
+UPDATE `STUDENT` SET `Sbknm`=Sbknm+1 WHERE Sno='16272001'
+(BOOKS表中，借书时需要将Bdt设置为当前日期的一个月后，用php完成)
+
+#续借
+（php完成）
+
+#还书
+UPDATE `BOOKS` SET `Bsno`=NULL,`Bdt`=NULL WHERE Bno='2'
+UPDATE `STUDENT` SET `Sbknm`=Sbknm-1 WHERE Sno='16272001'
+
+#根据学号查姓名
+SELECT Sname
+FROM STUDENT
+WHERE Sno='16272003'
+
+
+#查询借阅次数排名前5的书籍
+
+#查询逾期归还的所有书籍（即数据库中保存的时间数据小于本地时间的书籍，为测试方便可以直接指定一个具体时间，我会在php中进行修改）

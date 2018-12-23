@@ -1,0 +1,78 @@
+* {
+    margin: 0; border: 0;
+}
+body {
+    font-family: "Open Sans", serif;
+}
+.main {
+    width: 100%; height: 100%;
+    position: absolute;
+    display: block;
+    background-image: url("https://kerstatic.smartgslb.com/zhujike/img/bg-login.jpg");
+    overflow: hidden;
+}
+.form-box {
+    display: block; position: absolute;
+    width: 400px; height: 420px;
+    left: calc(50% - 200px);
+    top: 100px;
+    background-color: #ffffff;
+    border: solid rgba(102,102,102,.7) 4px;
+}
+.box-body {
+    display: block;
+    position: absolute;
+    width: 380px; height: 400px;
+    left: calc(50% - 190px); top: calc(50% - 200px);
+}
+.box-title {
+    width: 100%; height: 50px;
+    text-align: center;
+    line-height: 40px;
+}
+.box-title h2, .box-title h3{color: #636363;}
+.box-title h3 {font-size: 15px;}
+.box-input {
+    position: absolute; display: block;
+    width: 100%; height: 70%;
+    top: 120px;
+    font-family: inherit;
+    line-height: 30px;
+}
+.box-input span {font-size: 18px;}
+.box-input__info {
+    position: relative; display: block;
+    left: 16px;
+    width: 200px; height: 30px;
+}
+.box-input__info input {
+    border: 1px solid rgba(102,102,102,.5);
+    width: 120px; height: 24px;
+}
+.box-choice {
+    position: relative;
+    top: 150px;
+    left: 16px;
+}
+.box-choice input:nth-child(2) {
+    left: 20px;
+}
+.box-button {
+    position: absolute; display: block;
+    top: 260px; left: 16px;
+    border: 1px solid #636363;
+    width: 40px; height: 30px;
+    text-align: center;
+}
+.box-button:hover {cursor: pointer;}
+#box-button__sub {
+    color: #636363;
+    margin-top: 5px;
+    outline: none;
+}
+#box-button__sub:hover {cursor: pointer;}
+.box-feedback {
+    display: block; position: absolute;
+    bottom: 0;
+    right: 10px;
+}

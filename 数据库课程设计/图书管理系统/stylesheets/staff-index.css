@@ -1,0 +1,103 @@
+* {
+    margin: 0; border: 0;
+}
+body {
+    font-family: "Open Sans", serif;
+    background-image: url("https://kerstatic.smartgslb.com/zhujike/img/bg-login.jpg");
+}
+#main {
+    position: absolute;
+    display: block;
+    width: 100%; height: 100%;
+    left: 0; top: 0;
+    overflow: hidden;
+
+}
+.head {
+    display: block;
+    position: absolute;
+    width: 400px; height: 60px;
+    left: calc(50% - 200px); top: 30px;
+    box-shadow: 0 0 2px #636363;
+    line-height: 60px;
+    font-size: 30px;
+    text-align: center;
+}
+.exit {
+    position: absolute;
+    display: block;
+    right: 5px; top: 20px;
+    border: 1px solid #636363;
+    width: 50px; height: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.exit a {text-decoration: none;}
+.switch-part {
+    position: absolute;
+    display: block;
+    left: 30px; top: 150px;
+    width: 400px; height: 600px;
+    box-shadow: 0 0 2px #636363;
+    text-align: center;
+}
+.switch-part div {
+    position: relative;
+    width: 50%; height: 10%;
+    box-shadow: 0 0 1px #636363;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    line-height: 55px;
+    transition: background-color .6s;
+}
+.switch-part div:hover {
+    cursor: pointer;
+    background-color: #eeeeee;
+}
+.operation-part {
+    position: absolute;
+    display: block;
+    left: 450px; top: 150px;
+    width: 900px; height: 600px;
+    box-shadow: 0 0 5px #636363;
+}
+.op-part {display: none;}
+.op-part:nth-child(1) {display: block}
+.p-title {
+    position: absolute;
+    left: 30px; top: 30px;
+    color: #4d4d4d;
+}
+.staff-form {
+    display: block;
+    position: absolute;
+    left: 30px;
+    top:100px;
+    color: #4d4d4d;
+}
+.staff-form input {
+    box-shadow: 0 0 1px #4d4d4d;
+}
+.form-button {
+    position: absolute;
+    display: block;
+    margin-top: 30px;
+    width: 40px; height: 20px;
+    border: 1px solid #4d4d4d;
+    cursor: pointer;
+}
+.form-button__sub {
+    cursor: pointer;
+}
+.box-feedback {
+    position: absolute;
+    display: block;
+    width: 500px;
+    height: 500px;
+    bottom: 10px; right: 10px;
+    border: 1px solid #4d4d4d;
+    padding: 30px 30px;
+    color: #4d4d4d;
+    overflow: auto;
+}
